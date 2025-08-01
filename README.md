@@ -19,9 +19,9 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-[\images\Screenshot Recipe Desktop.png]
+[Desktop](\images\Screenshot Recipe Desktop.png)
 
-[\images\Screenshot Recipe Mobile.png]
+[Mobile](\images\Screenshot Recipe Mobile.png)
 
 ### Links
 
@@ -46,5 +46,5 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ## Author
 
-- Website - [Tati](https://www.your-site.com)
+- Website - [Tati](https://github.com/Nati-Tati)
 - Frontend Mentor - (https://www.frontendmentor.io)
