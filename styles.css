@@ -1,0 +1,257 @@
+html {   
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f6e8df;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    padding: 2.5rem;
+    background: hsl(0, 0%, 100%);
+    max-width: 700px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    flex: 1; /* Grow the container to take available vertical space */
+}
+
+.image-container img {
+    border-radius: 16px;
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Young Serif', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+p.description {
+    color:hsl(24, 5%, 18%);
+    line-height: 1.5;
+}
+
+.prep-time {
+    background-color: hsl(330, 100%, 98%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.prep-time h3 {
+    color: hsl(332, 51%, 32%);
+    padding: 0;
+}
+
+.prep-time ul{
+    list-style: none;
+    /* Убираем стандартный маркер */
+    padding-left: 0;
+}
+
+.prep-time ul li {
+    margin: 1em;
+    position: relative;
+    padding-left: 1.5em;
+    /* Отступ для псевдо-маркера */
+}
+
+.prep-time ul li::before {
+    content: "•";
+    /* Маркер вручную */
+    position: absolute;
+    left: -0.5em;
+    color: hsl(24, 5%, 18%);
+    font-size: 1.3em;
+
+}
+
+h2 {
+    font-family: 'Young Serif', serif;
+    color: hsl(14, 45%, 36%);
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+ul.ingredients {
+    list-style: none;
+            /* Убираем стандартный маркер */
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+
+ul.ingredients li {
+    margin: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    /* Отступ для псевдо-маркера */
+}
+
+ul.ingredients li::before {
+    content: "•";
+    /* Маркер вручную */
+    position: absolute;
+    left: -0.5rem;
+    color: hsl(24, 5%, 18%);
+    font-size: 1.5rem;
+    
+}
+
+hr {
+    margin: 2rem auto;
+    margin-bottom: 0;
+    border: none;
+    height: 1px;
+    background-color: hsl(30, 18%, 87%);
+}
+
+ol.instructions {
+    list-style: none;
+       /* Убираем стандартный маркер */
+    padding-left: 0;
+    counter-reset: custom-counter;
+}
+
+ol.instructions li {
+    counter-increment: custom-counter;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: hsl(24, 5%, 18%);
+}
+
+ol.instructions li::before{
+    content: counter(custom-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+    /* стиль для числа */
+    font-family: 'Outfit', serif;
+    font-size: 1.2rem;
+}
+
+.nutrition {
+    background: hsl(0, 0%, 100%);
+
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+.nutrition-table {
+    margin-top: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.nutrition-table td {
+    width: 100%;
+    padding: 0.5rem;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition-table tr:last-child td {
+    border-bottom: none;
+}
+
+.nutrition-table td:first-child {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.nutrition-table td:last-child {
+    padding-right: 18rem;
+    text-align: left;
+    font-weight: 800;
+    color: hsl(14, 45%, 36%);
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: hsl(24, 5%, 18%);
+}
+
+footer .attribution a {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer .attribution a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== Добавим десктопную адаптацию (1440px) ===== */
+@media (min-width: 768px) {
+    body {
+        padding: 4rem;
+    }
+
+    .container {
+        max-width: 700px;
+        padding: 3rem;
+    }
+
+    .prep-time {
+        padding: 1rem 2rem;
+    }
+
+    ol.instructions li {
+        font-size: 1.1rem;
+        padding-left: 3rem;
+    }
+
+    .nutrition-table td:last-child {
+        padding-right: 18rem;
+        /* уменьшить для больших экранов */
+    }
+}
+
+/* Мобильная адаптация table */
+@media (max-width: 480px) {
+    body {
+        font-family: 'Outfit', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        }
+
+    .image-container img {
+        width: 100vw;
+            /* ширина всего viewport'а */
+        max-width: 100vw;
+        height: auto;
+        display: block;
+        margin-left: calc(-1 * 2.5rem);
+        /* компенсируем padding контейнера // 
+        Здесь 2.5rem — это твой отступ .container {padding: 2.5rem;}*/
+        margin-top: calc(-1 * 2.5rem);
+        border-radius: 0;
+    }
+
+    .nutrition-table td:last-child {
+        padding-right: 5rem;
+    }
+
+
+}
